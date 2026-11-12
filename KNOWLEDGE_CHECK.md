@@ -12,7 +12,7 @@ Redirect the command's output to `results/job-history.txt` and include the file 
 
 **Your answer:** Provide the entire command you used, including all CLI options.
 
-...
+`mkdir -p results; sacct -u edr2ft -S 2026-11-04 -X --format=JobID,JobName,NodeList,Partition,Account,User,State,Start,Elapsed > results/job-history.txt`
 
 ## 2. Slurm: did every array task run at the same time?
 
@@ -24,7 +24,7 @@ You submitted your entire job array with one `sbatch` command, but Slurm schedul
 
 **Your answer:** Did all tasks in the array start at the same time? Was the elapsed time identical for every task? Explain why or why not.
 
-...
+No. The 101 tasks started between 2026-11-09 22:11:38 and 22:23:25, and their elapsed times ranged from 17 to 23 seconds. Slurm started tasks as GPU slices became available, and the books took different amounts of time to process.
 
 ## 3. Slurm: did my job use what it asked for?
 
@@ -36,5 +36,5 @@ Suppose your next job array has 1,000 books instead of 101. Before you submit it
 
 **Your answer:** How much memory and time did the task use, compared with what your script asked for? What would you change in your script, and why?
 
-...
+Task `22737898_1` used 2.89 GB of the requested 16 GB and 17 seconds of the requested 5 minutes. For a future array, I would request 8G and 00:01:00 to leave headroom while reserving fewer resources.
 

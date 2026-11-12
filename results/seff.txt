@@ -1,0 +1,12 @@
+Job ID: 22740420
+Array Job ID: 22737898_1
+Cluster: shen
+User/Group: edr2ft/users
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 2
+CPU Utilized: 00:00:09
+CPU Efficiency: 26.47% of 00:00:34 core-walltime
+Job Wall-clock time: 00:00:17
+Memory Utilized: 2.89 GB
+Memory Efficiency: 18.06% of 16.00 GB (16.00 GB/node)
